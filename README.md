@@ -50,7 +50,7 @@ Developed using **.NET MAUI**, it runs on **Windows** and **Android**, syncing r
 
 ---
 
-##ℹ️Key notes
+## ℹ️Key notes
 >As of 10/07/25 or October 7, 2025, the project will not be continued and will be abandoned.
 
 The project started on **August 21, 2025**, as a proposed platform. It has not been approved, but the coding process will take too long; thus, the project began early to maximize time before the scheduled **release date of October 1, 2025**, for Alpha Testing. Sadly, it was **rejected on September 21, 2025**. The project was nearly ok to lunch, and minor adjustments are in progress. Yet when the proposed platform was rejected, **it was abandoned and no progress has been made since then.**
