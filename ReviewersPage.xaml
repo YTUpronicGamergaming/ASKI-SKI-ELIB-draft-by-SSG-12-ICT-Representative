@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ASKI_SKIElib.ReviewersPage"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+    Title="Home">
+
+    <Grid>
+        <!-- Main layout structure: header bar + body -->
+        <Grid RowDefinitions="Auto, *"
+              BackgroundColor="Beige"
+              x:Name="MainContentGrid">
+            
+            <!-- Top Bar -->
+            <Grid
+                Padding="10"
+                BackgroundColor="#082567"
+                ColumnDefinitions="*, Auto"
+                RowSpacing="0">
+                <HorizontalStackLayout VerticalOptions="Center" Spacing="10" Padding="10">
+                    <Label Text="ASKI-SKI Elibrary"
+                           FontAttributes="Bold"
+                           FontSize="21"
+                           VerticalOptions="Center"
+                           TextColor="#008080"/>
+
+                    <Label x:Name="WelcomeLabel"
+                           FontAttributes="Bold"
+                           Text="user!"
+                           HorizontalTextAlignment="Justify"
+                           FontSize="21"
+                           VerticalOptions="Center"
+                           TextColor="#008080"/>
+                </HorizontalStackLayout>
+
+                <Button
+                    x:Name="MenuButton"
+                    Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    HorizontalOptions="End"
+                    WidthRequest="40" />
+            </Grid>
+
+            <Grid Grid.Row="1"
+                Padding="{OnPlatform Android='20', iOS='20', WinUI='50'}">
+
+                <syncfusion:SfPdfViewer x:Name="PdfViewer"
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill"
+                ShowToolbars="False"
+                EnableTextSelection="True"/>
+            </Grid>     
+        </Grid>
+
+        <BoxView x:Name="NavOverlay"
+                 BackgroundColor="#80000000"
+                 IsVisible="False"
+                 InputTransparent="False"
+                 ZIndex="9">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <!-- Right-side Hamburger Nav -->
+        <Grid x:Name="HamburgerNav"
+              BackgroundColor="#6495ED"
+              WidthRequest="200"
+              Padding="10"
+              HorizontalOptions="End"
+              VerticalOptions="Fill"
+              IsVisible="False"
+              TranslationX="200"
+              ZIndex="10">
+
+            <VerticalStackLayout Spacing="20">
+                <Button x:Name="HomeButton"
+                        Text="Home"
+                        StyleClass="navButton" />
+
+                <Button x:Name="EbooksButton"
+                        Text="Ebooks"
+                        StyleClass="navButton" />
+
+                <Button x:Name="ReviewersButton"
+                        Text="Reviewers"
+                        StyleClass="navButton" />
+
+                <Button x:Name="PernotesButton"
+                        Text="Personal Notes"
+                        StyleClass="navButton" />
+
+                <Button x:Name="AboutButton"
+                        Text="About"
+                        StyleClass="navButton" />
+
+                <Button x:Name="ProfileButton"
+                        Text="Profile"
+                        StyleClass="navButton" />
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

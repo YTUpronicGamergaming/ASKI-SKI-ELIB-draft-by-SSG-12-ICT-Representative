@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ASKI_SKIElib.EbooksPage"
+    Title="Ebooks">
+
+    <Grid>
+		
+        <!-- Main layout structure: header bar + body -->
+        <Grid RowDefinitions="Auto, *"
+              BackgroundColor="Beige">
+
+           
+
+            <!-- ScrollView Body -->
+            <ScrollView x:Name="MyScrollView"
+                        Grid.Row="1"
+                        >
+                <Grid>
+                    <Grid VerticalOptions="Center"
+      HorizontalOptions="Center"
+      Padding="{OnPlatform Android='20', iOS='20', WinUI='50'}">
+
+                        <VerticalStackLayout
+        MaximumWidthRequest="500"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        x:Name="AnnouncementsLayout"
+        Spacing="18">
+
+                            <!-- Search Bar and Button -->
+                            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Start">
+                                <Border Stroke="DarkBlue"
+                    StrokeThickness="2"
+                    BackgroundColor="White"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="6"
+                    WidthRequest="280">
+                                    <Entry x:Name="SearchEntry"
+                       Placeholder="Search ebooks..."
+                       Keyboard="Text"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       BackgroundColor="Transparent"
+                       WidthRequest="260"/>
+                                </Border>
+
+                                <Button x:Name="SearchButton"
+                    Text="🔍"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="12"
+                    BackgroundColor="RoyalBlue"
+                    TextColor="White"
+                    Clicked="OnSearchClicked"
+                    FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="📖 Ebooks 📖"
+                                FontSize="24"
+                                TextColor="DodgerBlue"
+                                HorizontalOptions="Center" />
+							
+                            <Label Text="Browse our collection of ebooks available for download soon."
+                                   FontSize="16"
+                                   TextColor="DodgerBlue"
+                                   HorizontalOptions="Center"/>
+                            
+                            
+                            
+                                <VerticalStackLayout x:Name="BooksLayout"
+                                 Spacing="20"
+                                 Padding="10">
+                                </VerticalStackLayout>
+                                
+                            
+                            
+
+
+
+                                </VerticalStackLayout>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+
+
+        <BoxView x:Name="NavOverlay"
+         BackgroundColor="#80000000"
+         IsVisible="False"
+         InputTransparent="False"
+         ZIndex="9">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer  />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+
+        <!-- Right-side Hamburger Nav -->
+        <Grid x:Name="HamburgerNav"
+              BackgroundColor="#6495ED"
+              WidthRequest="200"
+              Padding="10"
+              HorizontalOptions="End"
+              VerticalOptions="Fill"
+              IsVisible="False"
+              TranslationX="200"
+              ZIndex="10">
+
+            <VerticalStackLayout Spacing="20">
+                <Button x:Name="HomeButton"
+                        Text="Home"
+                        
+                        StyleClass="navButton" />
+
+                <Button x:Name="EbooksButton"
+                        Text="Ebooks"
+                        
+                        StyleClass="navButton" />
+
+                <Button x:Name="ReviewersButton"
+                        Text="Reviewers"
+                        
+                        StyleClass="navButton" />
+
+                <Button x:Name="PernotesButton"
+                        Text="Personal Notes"
+                        
+                        StyleClass="navButton" />
+
+                <Button x:Name="AboutButton"
+                        Text="About"
+                        
+                        StyleClass="navButton" />
+
+                <Button x:Name="ProfileButton"
+                        Text="Profile"
+                        
+                        StyleClass="navButton" />
+            </VerticalStackLayout>
+        </Grid>
+		<Grid x:Name="OverlayContainer"
+      BackgroundColor="#80000000"
+      IsVisible="False"
+      Padding="21"
+      VerticalOptions="Fill"
+      HorizontalOptions="Fill"
+      ZIndex="10">
+
+			<Frame CornerRadius="16"
+				   BackgroundColor="White"
+				   HorizontalOptions="Center"
+				   VerticalOptions="Center"
+				   Padding="12"
+				   WidthRequest="300"
+				   HeightRequest="150"
+				   HasShadow="True">
+
+				<VerticalStackLayout Spacing="16">
+					
+					<HorizontalStackLayout HorizontalOptions="Start" VerticalOptions="Start">
+					
+					<Button Text="✖"
+							Clicked="OnOverlayCancelClicked"
+							BackgroundColor="Transparent"
+							TextColor="Gray"
+							FontSize="16"
+							HorizontalOptions="Start" />
+					</HorizontalStackLayout>
+					
+					<Label x:Name="OverlayLabel"
+						   Text="Downloading..."
+						   FontSize="18"
+						   TextColor="Black"
+						   HorizontalOptions="Center" />
+
+					<ProgressBar x:Name="DownloadProgressBar"
+								 Progress="0"
+								 WidthRequest="180"
+								 HeightRequest="8"
+								 IsVisible="True" />
+
+					
+				</VerticalStackLayout>
+			</Frame>
+		</Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="ASKI_SKIElib.ProfilePage"
+                 Title="Profile"
+                 BackgroundColor="{StaticResource PrimaryDark}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Profile Info Card -->
+            <Border 
+                Stroke="{StaticResource Primary}" 
+                StrokeShape="RoundRectangle 20"
+                BackgroundColor="White"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label 
+                        x:Name="lblName"
+                        Text="Name: "
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource PrimaryDark}" />
+
+                    <Label 
+                        x:Name="lblGrade"
+                        Text="Strand: "
+                        FontSize="18"
+                        TextColor="{StaticResource PrimaryDarkText}" />
+
+                    <Label 
+                        x:Name="lblGradeSectionStrand"
+                        Text="Strand: "
+                        FontSize="18"
+                        TextColor="{StaticResource PrimaryDarkText}" />
+
+                    <Label 
+                        x:Name="lblSubjects"
+                        Text="Favorite Subjects: "
+                        FontSize="18"
+                        TextColor="{StaticResource PrimaryDarkText}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Edit button -->
+            <Button 
+                Text="Edit Profile"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

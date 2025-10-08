@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ASKI_SKIElib.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ASKI_SKIElib"
+   
+    Title="ASKI_SKIElib">
+
+    <ShellContent
+        Title="Checker"
+        ContentTemplate="{DataTemplate local:Checker}"
+        Route="Checker" />
+
+</Shell>

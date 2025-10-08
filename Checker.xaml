@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ASKI_SKIElib.Checker"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title=""
+    >
+
+    
+    <Grid
+        x:Name="MainGrid"
+        BackgroundColor="Beige">
+        
+        <ScrollView>
+            
+            <Grid 
+                  VerticalOptions="Fill"
+                  HorizontalOptions="FillAndExpand"
+                  Padding="30">
+
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    WidthRequest="500">
+
+                    <Label 
+                           Text="🔐 ==ASKI-SKIElib== 🔐"
+                           FontSize="28"
+                           HorizontalOptions="Center" 
+                           TextColor="Black"/>
+
+                    <skia:SKLottieView
+                        Source="loading.json"
+                        RepeatCount="-1"  
+                        RepeatMode="Restart"
+                        HeightRequest="400"
+                        WidthRequest="400"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+
+                        <Label x:Name="StatusLabel"
+                           Text=""
+                           TextColor="Red"
+                           FontAttributes="Italic"
+                           HorizontalOptions="Center">
+                        
+                           <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="devAcs" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+        <Grid x:Name="OverlayContainer"
+                BackgroundColor="#80000000"
+                IsVisible="False"
+                Padding="21"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                ZIndex="10">
+
+        <Frame CornerRadius="16"
+	            BackgroundColor="White"
+	            HorizontalOptions="Center"
+	            VerticalOptions="Center"
+	            Padding="12"
+	            WidthRequest="330"
+	            MaximumHeightRequest="130"
+	            HasShadow="True">
+
+            <VerticalStackLayout Spacing="16">
+                    <Label x:Name="OverlayLabel"
+                        Text="Downloading..."
+                        FontSize="18"
+                        TextColor="Black"
+                        HorizontalOptions="Center" />
+
+                    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                        <Button x:Name="UpdateButton"
+                        Text="Update"
+				        Clicked="UpdateLink"
+				        BackgroundColor="Blue"
+				        TextColor="Azure"
+				        FontSize="16"
+				        HorizontalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                   
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>
