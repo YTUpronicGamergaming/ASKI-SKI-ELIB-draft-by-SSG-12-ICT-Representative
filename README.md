@@ -18,13 +18,13 @@ Developed using **.NET MAUI**, it runs on **Windows** and **Android**, syncing r
 
 ## ✨ Features
 
-- 🔐 **Login & Account Management** — Secure access with user authentication  
-- 📘 **Reviewers & eBooks** — View PDF materials fetched directly from Supabase Storage  
-- 🗂️ **Personal Notes** — Create and organize personal study notes  
-- 📢 **Announcements Page** — Admins can post and manage announcements  
-- 🔍 **Search and Filter** — Quickly find materials  
+- 🔐 **Login & Account Management** — Secure access with user authentication  ✅
+- 📘 **Reviewers & eBooks** — View PDF materials fetched directly from Supabase Storage  ✅
+- 🗂️ **Personal Notes** — Create and organize personal study notes  ❌
+- 📢 **Announcements Page** — Admins can post and manage announcements  ✅
+- 🔍 **Search and Filter** — Quickly find materials  ❌
 - 🌗 **Modern UI** — Responsive design with dark/light mode (in progress)  
-- ⚙️ **Offline Cache** — Previously opened PDFs stay accessible  
+- ⚙️ **Offline Cache** — Previously opened PDFs stay accessible  ✅
 
 ---
 
@@ -42,7 +42,7 @@ Developed using **.NET MAUI**, it runs on **Windows** and **Android**, syncing r
 ---
 
 ## Supported Platforms
->No Apple devices Supported
+>**No Apple devices supported**
 
 | 📱Mobile | 💻Windows | 🐧💻Linux |
 |-------|-------------|-------|
