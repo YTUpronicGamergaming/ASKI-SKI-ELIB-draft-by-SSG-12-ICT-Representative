@@ -105,7 +105,9 @@ The project started on **August 21, 2025**, as a proposed platform. It was not a
 > GitHub doesn’t preview videos directly in Markdown.  
 > To watch the demo, click the link below:
 
-[▶️ Watch Demo Video](demovidpic/video.mp4)
+
+https://github.com/user-attachments/assets/971f6d6e-7745-4e94-b6e8-5f575cbc6271
+
 
 ---
 
