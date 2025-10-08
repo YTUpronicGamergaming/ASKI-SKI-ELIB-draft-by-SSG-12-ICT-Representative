@@ -58,32 +58,32 @@ The project started on **August 21, 2025**, as a proposed platform. It has not b
 
 ## 📱 Screenshots (Preview)
 
-![Login page picture](demovidpic/loginpage)
+![Login page picture](demovidpic/Screenshot-2025-10-08-231902.png)
 >This is the login page
 
 ---
 
-![Sidebar page picture](demovidpic/sidebar)
+![Sidebar page picture](demovidpic/Screenshot-2025-10-08-232340.png)
 >This is the sidebar
 
 ---
 
-![Home page picture](demovidpic/homepage)
+![Home page picture](demovidpic/Screenshot-2025-10-08-232318.png)
 >This is the home page
 
 ---
 
-![Ebooks page picture](demovidpic/ebookspage)
+![Ebooks page picture](demovidpic/Screenshot-2025-10-08-232404.png)
 >This is the ebooks page
 
 ---
 
-![Reviewer page picture](demovidpic/reviewerpage)
+![Reviewer page picture](demovidpic/reviewerpage.png)
 >This is the reviewer page
 
 ---
 
-![Video](demovidpic/video)
+![Video](demovidpic/video.mp4)
 
 ---
 
