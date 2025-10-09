@@ -116,5 +116,5 @@ https://github.com/user-attachments/assets/971f6d6e-7745-4e94-b6e8-5f575cbc6271
 
 Developed by **Prince Rainier Apolonio**
 **SSG 12-ICT Representative, ASKI-SKI**
-📅 Development Period: August 21 – September 21, 2025
+📅 Development Period: August 01 – September 21, 2025
 📍 Location: Talavera, Nueva Ecija
